@@ -1,3 +1,6 @@
+""" NIRCam AZ TSO Data Challenge (GJ 436b) Simulations
+         ~ Arsh R. Nadkarni (UArizona), 2020 """  
+
 # ----------   Set Environment Variables   ----------
 
 import os
@@ -103,6 +106,7 @@ contents['1'] = {'times': times,
                  'fluxes': flux}
 save_tso(contents, lightcurve_file, time_unit='days')
 
+
 # ----------  Transmission Spectrum  ----------
 
 in_file = os.path.join(tsdir,'GJ436b_trans_MIRAGE_GRISMR2.txt')
@@ -111,6 +115,7 @@ tab = ascii.read(in_file)
 new_trans = np.sqrt(tab['Transmission'])
 tab['Transmission'] = new_trans
 ascii.write(tab, tran_spec_file, overwrite=True)
+
 
 # ---------- Create Grism TSO Catalog   ----------
 
@@ -158,7 +163,9 @@ yam = yaml_generator.SimInput(xml_file, pointing_file, catalogs=catalogs, verbos
 yam.use_linearized_darks = True
 yam.create_inputs()
 
-# SIMULATE F322W2 GRISMR TSO
+
+# ---------- SIMULATE F322W2 GRISMR TSO ----------
+
 gr_tso_yaml_file = os.path.join(output_yaml_dir, 'jw00042001001_01101_00002_nrca5.yaml')
 gr_f322w2 = GrismTSO(gr_tso_yaml_file, SED_file=sed_file, SED_normalizing_catalog_column=None,
                     final_SED_file=None, save_dispersed_seed=True, source_stamps_file=None,
@@ -166,7 +173,9 @@ gr_f322w2 = GrismTSO(gr_tso_yaml_file, SED_file=sed_file, SED_normalizing_catalo
                     orders=["+1", "+2"])
 gr_f322w2.create()
 
-# SIMULATE WLP4+CLEAR IMAGING TSO
+
+# ---------- SIMULATE WLP4+CLEAR IMAGING TSO ----------
+
 img_tso_sw_yaml = os.path.join(output_yaml_dir, 'jw00042001001_01101_00001_nrca1.yaml')
 img_tso = ImgSim()
 img_tso.paramfile = img_tso_sw_yaml

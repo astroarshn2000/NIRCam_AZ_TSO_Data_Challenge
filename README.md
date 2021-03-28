@@ -12,14 +12,14 @@ The goal of this activity is to simulate TSOs for an exoplanet much like GJ 436b
 
 The planet for the simulated observations is loosely based on GJ 436b. The transit parameters are listed below, with their associated uncertainties. 
 
-**Note!** The actual parameters used to generate the simulated lightcurves have been randomly drawn from the values listed below using a Gaussian with a standard deviation equal to the associated uncertaitny. As an example, a/Rs was chosen using the Python command scipy.norm.rvs(loc=14.54, scale=0.14). So don't just fix everything to the central values and assume it will work.
+**Note!** The actual parameters used to generate the simulated lightcurves have been randomly drawn from the values listed below using a Gaussian with a standard deviation equal to the associated uncertainty. As an example, a/Rs was chosen using the Python command scipy.norm.rvs(loc=14.54, scale=0.14). So don't just fix everything to the central values and assume it will work.
 
 The stellar properties are:
 * **Teff:** 3500K
 * **log(g):** 5.0
 * **[Fe/H]:** 0.0
 
-Limb-darkening is included, but is assumed to be constant as a function of wavelength. The exact LD coeffecients are left as an exercise for the observer.
+Limb-darkening is included, but is assumed to be constant as a function of wavelength. The exact LD coefficients are left as an exercise for the observer.
 
 |           Parameter          	|      Value     	|  Uncertainty  	|
 |:----------------------------:	|:--------------:	|:-------------:	|
