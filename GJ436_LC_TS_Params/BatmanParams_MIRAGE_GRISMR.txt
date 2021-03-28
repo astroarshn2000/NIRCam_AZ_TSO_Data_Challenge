@@ -1,0 +1,11 @@
+params.t0 = 0.04165880981289195
+params.per = 2.643898012982137
+params.inc = 86.87843069704299
+params.rp = 0.0828098015829365
+params.a = 14.656751572765119
+params.w = 90. 
+params.ecc = 0.0 
+params.fp = 0.0 
+params.t_secondary = 0.0 
+params.limb_dark = "quadratic" 
+params.u = [0.019121089782213305, 0.3124784495689501] 
