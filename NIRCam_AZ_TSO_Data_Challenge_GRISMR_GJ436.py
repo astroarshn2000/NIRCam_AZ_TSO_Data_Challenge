@@ -45,7 +45,7 @@ from mirage.yaml import yaml_generator
 # ----------   Define Paths to organize Inputs and Outputs  ----------
 
 input_data_path = os.path.abspath('/home/anadkarni/NIRCam_AZ_TSO_Data_Challenge/GJ436_apt_data/')
-output_dir = '/home/anadkarni/NIRCam_AZ_TSO_Data_Challenge/GJ436/GJ436_2102/'
+output_dir = '/home/anadkarni/NIRCam_AZ_TSO_Data_Challenge/GJ436_2102/'
 output_yaml_dir = os.path.abspath('/home/anadkarni/NIRCam_AZ_TSO_Data_Challenge/GJ436_2102/GJ436_yaml_data/')
 ensure_dir_exists(output_yaml_dir)
 output_data_dir = os.path.abspath('/home/anadkarni/NIRCam_AZ_TSO_Data_Challenge/GJ436_2102/GJ436_sim_data/')
